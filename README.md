@@ -16,7 +16,7 @@ Different branches of this repository reflect the state of the software project 
 
 - Episode ["1. Course introduction"](https://carpentries-incubator.github.io/fair-research-software/01-introduction.html) is not making changes to the software.
 - Episode ["2. Better start with a software project"](https://carpentries-incubator.github.io/fair-research-software/02-better-start-version-control.html) is starting from the [spacewalks.zip](./spacewalks.zip) archive.
-- [Branch 03-reproducible-dev-environment](https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/04-version-control) matches the code at the start of episode ["3. Reproducible software environments"](https://carpentries-incubator.github.io/fair-research-software/03-reproducible-dev-environment.html)
+- [Branch 03-reproducible-dev-environment](https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment) matches the code at the start of episode ["3. Reproducible software environments"](https://carpentries-incubator.github.io/fair-research-software/03-reproducible-dev-environment.html)
 
 Finally, the improved code at the end of the lesson can be found in [the "final" branch](https://github.com/carpentries-incubator/bbrs-software-project/tree/main/tree/final).
 
