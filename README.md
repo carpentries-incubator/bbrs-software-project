@@ -45,7 +45,7 @@ The practices we cover for building better research software fall into the follo
     - Missing a LICENSE file to specify how the code can be reused — without it, reuse is not permitted by default
     - The code should be shared through collaborative software development platforms rather than distributing it via email or messaging apps
 
-This is a non-exhaustive list - there are possibly other things that can be improved as well. 
+This is a non-exhaustive list - there are possibly other things that can be improved upon. 
 
 ### Improved software project version
 
