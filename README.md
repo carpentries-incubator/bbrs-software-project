@@ -18,6 +18,7 @@ Different branches of this repository reflect the state of the software project 
 - Episode ["2. Better start with a software project"](https://carpentries-incubator.github.io/fair-research-software/02-better-start-version-control.html) is starting from the [spacewalks.zip](./spacewalks.zip) archive.
 - [Branch 03-reproducible-dev-environment](https://github.com/carpentries-incubator/bbrs-software-project/tree/03-reproducible-dev-environment) matches the code at the start of episode ["3. Reproducible software environments"](https://carpentries-incubator.github.io/fair-research-software/03-reproducible-dev-environment.html)
 - [Branch 04-code-readability](https://github.com/carpentries-incubator/bbrs-software-project/tree/04-code-readability) matches the code at the start of episode ["4. Code readability"](https://carpentries-incubator.github.io/fair-research-software/04-code-readability.html)
+- [Branch 05-code-structure](https://github.com/carpentries-incubator/bbrs-software-project/tree/05-code-structure) matches the code at the start of episode ["5. Code structure"](https://carpentries-incubator.github.io/fair-research-software/05-code-structure.html)
 
 Finally, the improved code at the end of the lesson can be found in [the "final" branch](https://github.com/carpentries-incubator/bbrs-software-project/tree/main/tree/final).
 
