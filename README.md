@@ -1,4 +1,4 @@
-## Better research software project
+## Building better research software - example project
 
 This repository provides example code and data designed as a companion software project for the ["Building better research software" lesson](https://github.com/carpentries-incubator/better-research-software).
 
