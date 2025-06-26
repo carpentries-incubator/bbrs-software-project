@@ -10,6 +10,8 @@ This example project is intentionally constructed to illustrate [some common mis
 Throughout the lesson, course attendees learn and apply better research software practices — including elements of FAIR — 
 as they work to improve the software project.
 
+### Branches
+
 Different branches of this repository reflect the state of the software project at the start of each episode in the ["Building better research software" lesson](https://github.com/carpentries-incubator/better-research-software):
 
 - Episode ["1. Course introduction"](https://carpentries-incubator.github.io/fair-research-software/01-introduction.html) is not making changes to the software.
