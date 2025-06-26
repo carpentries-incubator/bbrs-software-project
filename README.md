@@ -5,7 +5,7 @@ The software project is packaged in the [spacewalks.zip archive](./spacewalks.zi
 
 The software project contains a Python script that uses the [NASA data on human space walks (Extravehicular activities - EVAs)](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/data_preview), 
 exported/downloaded in JSON format, does some analysis over this data, plots a few graphs and saves the data in CSV format. 
-This example project is intentionally constructed to illustrate common mistakes in research software development (see below for areas to improve).
+This example project is intentionally constructed to illustrate [some common mistakes in research software development](#improving-project-using-good-software-development-practices).
 
 Throughout the lesson, course attendees learn and apply better research software practices — including elements of FAIR — 
 as they work to improve the software project.
