@@ -5,15 +5,20 @@ The software project is packaged in the [spacewalks.zip archive](./spacewalks.zi
 
 The software project contains a Python script that uses the [NASA data on human space walks (Extravehicular activities - EVAs)](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/data_preview), 
 exported/downloaded in JSON format, does some analysis over this data, plots a few graphs and saves the data in CSV format. 
-This example project is intentionally constructed to illustrate common mistakes in research software development (see below for areas to improve).
+This example project is intentionally constructed to illustrate [some common mistakes in research software development](#improving-project-using-good-software-development-practices).
 
 Throughout the lesson, course attendees learn and apply better research software practices — including elements of FAIR — 
 as they work to improve the software project.
 
-The different branches of this repository reflect the state of the software project at the start of each episode in the ["Building better research software" lesson](https://github.com/carpentries-incubator/better-research-software):
+### Branches
 
-- TODO
+Different branches of this repository reflect the state of the software project at the start of each episode in the ["Building better research software" lesson](https://github.com/carpentries-incubator/better-research-software):
 
+- Episode ["1. Course introduction"](https://carpentries-incubator.github.io/fair-research-software/01-introduction.html) is not making changes to the software.
+- Episode ["2. Better start with a software project"](https://carpentries-incubator.github.io/fair-research-software/02-better-start-version-control.html) is starting from the [spacewalks.zip](./spacewalks.zip) archive.
+- [Branch 03-reproducible-dev-environment](https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/04-version-control) matches the code at the start of episode ["3. Reproducible software environments"](https://carpentries-incubator.github.io/fair-research-software/03-reproducible-dev-environment.html)
+
+Finally, the improved code at the end of the lesson can be found in [the "final" branch](https://github.com/carpentries-incubator/bbrs-software-project/tree/main/tree/final).
 
 ### Improving project using good software development practices
 
