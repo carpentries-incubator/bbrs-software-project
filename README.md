@@ -1,14 +1,14 @@
 ## Building better research software - example project
 
-This repository provides example code and data designed as a companion software project for the ["Building better research software" lesson](https://github.com/carpentries-incubator/better-research-software).
+This repository provides an example software project designed as a companion for the ["Building better research software" lesson](https://github.com/carpentries-incubator/better-research-software).
+The software project is packaged in the [spacewalks.zip archive](./spacewalks.zip) and serves as the starter bundle for learners to download at the beginning of the course. 
 
-The code and data are packaged in the [spacewalks.zip archive](./spacewalks.zip), which serves as the starter bundle for learners to download at the beginning of the course. 
-The code is a Python script that uses the [NASA data on human space walks (Extravehicular activities - EVAs)](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/data_preview), 
+The software project contains a Python script that uses the [NASA data on human space walks (Extravehicular activities - EVAs)](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/data_preview), 
 exported/downloaded in JSON format, does some analysis over this data, plots a few graphs and saves the data in CSV format. 
 This example project is intentionally constructed to illustrate common mistakes in research software development (see below for areas to improve).
 
-Throughout the lesson, learners are taught and apply better research software practices — including elements of FAIR — 
-as they work to enhance and improve the project.
+Throughout the lesson, course attendees learn and apply better research software practices — including elements of FAIR — 
+as they work to improve the software project.
 
 The different branches of this repository reflect the state of the software project at the start of each episode in the ["Building better research software" lesson](https://github.com/carpentries-incubator/better-research-software):
 
