@@ -23,8 +23,8 @@ The practices we cover for building better research software fall into the follo
 1. **Steps you can take in your own computing environment to improve the software**
     - The project is missing a `requirements.txt` (or equivalent) file to document dependencies
     - Instructions for running the code are buried within the code rather than provided explicitly
-    - Version control is not used; instead, versioning is handled by embedding versions in filenames (e.g., `my code_v2.py` or `astronaut-data-analyses-old`).
-    - Improve folder structure — group data files, analysis results, plots and tests into clearly named directories
+    - Version control is not used; instead, versioning is handled by embedding versions in filenames (e.g. `my code_v2.py`) or directories (e.g. `astronaut-data-analyses-old`).
+    - The project's folder structure could be improved — grouping data files, analysis results, plots and tests into clearly named directories
 2. **Steps you can take to improve the source code and organisation of the project**
     - Avoid non-descriptive file names like `data.json` or `my_code_v2.py` — use names that reflect the content or purpose of the file
     - Do not use blank spaces or special characters in file names as they can cause errors or be misinterpreted when running scripts from command line
