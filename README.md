@@ -17,7 +17,7 @@ The different branches of this repository reflect the state of the software proj
 
 ### Improving project using good software development practices
 
-There is a number of things that can be improved with the starter [code and data bundle](./spacewalks.zip). 
+There is a number of things that can be improved with the starter [software project](./spacewalks.zip). 
 The practices we cover for building better research software fall into the following three areas:
 
 1. **Steps you can take in your own computing environment to improve the software**
