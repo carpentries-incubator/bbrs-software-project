@@ -23,7 +23,7 @@ Different branches of this repository reflect the state of the software project 
 - [Branch 07-software-documentation](https://github.com/carpentries-incubator/bbrs-software-project/tree/07-software-documentation) matches the code at the start of episode ["7. Software documentation"](https://carpentries-incubator.github.io/fair-research-software/07-software-documentation)
 - [Branch 08-open-collaboration](https://github.com/carpentries-incubator/bbrs-software-project/tree/08-open-collaboration) matches the code at the start of episode ["8. Open collaboration"](https://carpentries-incubator.github.io/fair-research-software/08-open-collaboration.html)
 
-**Finally, the improved code at the end of the lesson can be found in [the "final" branch](https://github.com/carpentries-incubator/bbrs-software-project/tree/main/tree/final).**
+**Finally, the better and improved code as it is at the end of the lesson can be found in [the "final" branch](https://github.com/carpentries-incubator/bbrs-software-project/tree/main/tree/final).**
 
 ### Improving project using good software development practices
 
