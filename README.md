@@ -1,6 +1,6 @@
 ## Building better research software - example project
 
-This repository provides an example software project designed as a companion for the ["Building better research software" lesson]([https://github.com/carpentries-incubator/better-research-software](https://github.com/carpentries-incubator/fair-research-software)).
+This repository provides an example software project designed as a companion for the ["Building better research software" lesson](https://github.com/carpentries-incubator/fair-research-software).
 The software project is packaged in the [spacewalks.zip archive](./spacewalks.zip) and serves as the starter bundle for learners to download at the beginning of the course. 
 
 The software project contains a Python script that uses the [NASA data on human space walks (Extravehicular activities - EVAs)](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/data_preview), 
