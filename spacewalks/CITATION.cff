@@ -1,0 +1,24 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Spacewalks
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Jaffa
+    name-particle: Sarah
+  - given-names: Aleksandra
+    family-names: Nenadic
+  - given-names: Kamilla
+    family-names: Kopec-Harding
+repository-code: >-
+  https://github.com/YOUR-REPOSITORY-URL/spacewalks.git
+abstract: >-
+  A Python script to analyse NASA extravehicular activity
+  data
+keywords:
+  - NASA
+  - Extravehicular activity
