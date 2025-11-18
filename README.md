@@ -7,7 +7,7 @@ The software project contains a Python script that uses the [NASA data on human 
 exported/downloaded in JSON format, does some analysis over this data, plots a few graphs and saves the data in CSV format. 
 This example project is intentionally constructed to illustrate [some common mistakes in research software development](#improving-project-using-good-software-development-practices).
 
-Throughout the lesson, course attendees learn and apply better research software practices — including elements of FAIR — as they work to improve the software project.
+Throughout the lesson, course attendees learn and apply better research software practices — including elements of [FAIR](https://www.nature.com/articles/s41597-022-01710-x) — as they work to improve the software project.
 
 ### Branches
 
