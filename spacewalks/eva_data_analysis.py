@@ -7,7 +7,7 @@ def read_json_to_dataframe(input_file):
     Clean the data by removing any incomplete rows and sort by date
 
     Args:
-        input_file (str): The path to the JSON file.
+        input_file (file or str): The file object or path to the JSON file.
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
@@ -27,7 +27,7 @@ def write_dataframe_to_csv(df, output_file):
 
     Args:
         df (pd.DataFrame): The input dataframe.
-        output_file (file): The CSV file to the output the results to.
+        output_file (file or str): The file object or path to the output CSV file.
 
     Returns:
         None
