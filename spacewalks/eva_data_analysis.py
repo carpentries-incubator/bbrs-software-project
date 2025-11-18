@@ -47,7 +47,7 @@ def plot_cumulative_time_in_space(df, graph_file):
 
     Args:
         df (pd.DataFrame): The input dataframe.
-        graph_file (str): The path to the output graph file.
+        graph_file (file or str): The file object or path to the output graph file.
 
     Returns:
         None
