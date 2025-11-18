@@ -8,7 +8,7 @@ fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Pu
 data=[]
 import json
 
-for i in range(374):
+for i in range(375):
     line=data_f.readline()
     print(line)
     data.append(json.loads(line[1:-1]))
