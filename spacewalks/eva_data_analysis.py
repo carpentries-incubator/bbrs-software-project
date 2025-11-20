@@ -165,6 +165,7 @@ def summary_duration_by_astronaut(df):
     Returns:
         sum_by_astro (pd.DataFrame): Data frame with a row for each astronaut and a summarized column 
     """
+    print(f'Calculating summary of total EVA time by astronaut')
     subset = df.loc[:,['crew', 'duration']] # subset to work with only relevant columns
     subset.crew = subset.crew.str.split(';').apply(lambda x: [i for i in x if i.strip()]) # splitting the crew into individuals and removing blank string splits from ending ;
     subset = subset.explode('crew') # separating lists of crew into individual rows
