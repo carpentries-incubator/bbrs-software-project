@@ -4,7 +4,7 @@ import sys
 import re
 
 
-def main(input_file, output_file, graph_file):
+def main(input_file, output_file, duration_by_astronaut_output_file, graph_file):
     print("--START--")
 
     # Read the data from JSON file
@@ -12,6 +12,11 @@ def main(input_file, output_file, graph_file):
 
     # Convert and export data to CSV file
     write_dataframe_to_csv(eva_data, output_file)
+
+    # Calculate summary table for total EVA per astronaut
+    duration_by_astronaut_df = summary_duration_by_astronaut(eva_data)
+    # Save summary duration data by each astronaut to CSV file
+    write_dataframe_to_csv(duration_by_astronaut_df, duration_by_astronaut_output_file)
 
     # Sort dataframe by date ready to be plotted (date values are on x-axis)
     eva_data.sort_values('date', inplace=True)
@@ -28,14 +33,14 @@ def read_json_to_dataframe(input_file):
     Clean the data by removing any rows where the 'duration' value is missing.
 
     Args:
-        input_file (str): The path to the JSON file.
+        input_file (file or str): The file object or path to the JSON file.
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
     """
     print(f'Reading JSON file {input_file}')
     # Read the data from a JSON file into a Pandas dataframe
-    eva_df = pd.read_json(input_file, convert_dates=['date'], encoding="ascii")
+    eva_df = pd.read_json(input_file, convert_dates=['date'], encoding='ascii')
     eva_df['eva'] = eva_df['eva'].astype(float)
     # Clean the data by removing any rows where duration is missing
     eva_df.dropna(axis=0, inplace=True)
@@ -48,14 +53,14 @@ def write_dataframe_to_csv(df, output_file):
 
     Args:
         df (pd.DataFrame): The input dataframe.
-        output_file (str): The path to the output CSV file.
+        output_file (file or str): The file object or path to the output CSV file.
 
     Returns:
         None
     """
     print(f'Saving to CSV file {output_file}')
     # Save dataframe to CSV file for later analysis
-    df.to_csv(output_file, index=False, encoding="utf-8")
+    df.to_csv(output_file, index=False, encoding='utf-8')
 
 def plot_cumulative_time_in_space(df, graph_file):
     """
@@ -68,7 +73,7 @@ def plot_cumulative_time_in_space(df, graph_file):
 
     Args:
         df (pd.DataFrame): The input dataframe.
-        graph_file (str): The path to the output graph file.
+        graph_file (file or str): The file object or path to the output graph file.
 
     Returns:
         None
@@ -149,6 +154,26 @@ def add_crew_size_column(df):
     return df_copy
 
 
+def summary_duration_by_astronaut(df):
+    """
+    Summarize the duration data by each astronaut and saves resulting table to a CSV file
+
+    Args: 
+        df (pd.DataFrame): The input dataframe to be summarized
+
+    
+    Returns:
+        sum_by_astro (pd.DataFrame): Data frame with a row for each astronaut and a summarized column 
+    """
+    subset = df.loc[:,['crew', 'duration']] # subset to work with only relevant columns
+    subset.crew = subset.crew.str.split(';').apply(lambda x: [i for i in x if i.strip()]) # splitting the crew into individuals and removing blank string splits from ending ;
+    subset = subset.explode('crew') # separating lists of crew into individual rows
+    subset = add_duration_hours_variable(subset) # need duration_hours for easier calcs
+    subset = subset.drop('duration', axis=1) # dropping extra duration column as those don't calculate correctly
+    subset = subset.groupby('crew').sum() 
+    return subset
+
+
 if __name__ == "__main__":
 
     if len(sys.argv) < 3:
@@ -160,7 +185,7 @@ if __name__ == "__main__":
         output_file = sys.argv[2]
         print('Using custom input and output filenames')
 
-    graph_file = './cumulative_eva_graph.png'python3 -m pip install "mkdocstrings[python]"
+    graph_file = './cumulative_eva_graph.png'
+    duration_by_astronaut_output_file = 'results/duration_by_astronaut.csv'
 
-
-    main(input_file, output_file, graph_file)
+    main(input_file, output_file, duration_by_astronaut_output_file, graph_file)
