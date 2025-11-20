@@ -92,7 +92,7 @@ def plot_cumulative_time_in_space(df, graph_file):
         None
     """
     print(f'Plotting cumulative spacewalk duration and saving to {graph_file}')
-    df['duration_hours'] = df['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
+    df = add_duration_hours_variable(df)
     df['cumulative_time'] = df['duration_hours'].cumsum()
     plt.plot(df['date'], df['cumulative_time'], 'ko-')
     plt.xlabel('Year')
