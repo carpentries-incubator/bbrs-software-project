@@ -22,20 +22,38 @@ def main(input_file, output_file, graph_file):
     print("--END--")
 
 
+def main(input_file, output_file, graph_file):
+    print("--START--")
+
+    # Read the data from JSON file
+    eva_data = read_json_to_dataframe(input_file)
+
+    # Convert and export data to CSV file
+    write_dataframe_to_csv(eva_data, output_file)
+
+    # Sort dataframe by date ready to be plotted (date values are on x-axis)
+    eva_data.sort_values('date', inplace=True)
+
+    # Plot cumulative time spent in space over years
+    plot_cumulative_time_in_space(eva_data, graph_file)
+
+    print("--END--")
+
+
 def read_json_to_dataframe(input_file):
     """
     Read the data from a JSON file into a Pandas dataframe.
     Clean the data by removing any rows where the 'duration' value is missing.
 
     Args:
-        input_file (str): The path to the JSON file.
+        input_file (file or str): The file object or path to the JSON file.
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
     """
     print(f'Reading JSON file {input_file}')
     # Read the data from a JSON file into a Pandas dataframe
-    eva_df = pd.read_json(input_file, convert_dates=['date'], encoding="ascii")
+    eva_df = pd.read_json(input_file, convert_dates=['date'], encoding='ascii')
     eva_df['eva'] = eva_df['eva'].astype(float)
     # Clean the data by removing any rows where duration is missing
     eva_df.dropna(axis=0, inplace=True)
@@ -48,14 +66,14 @@ def write_dataframe_to_csv(df, output_file):
 
     Args:
         df (pd.DataFrame): The input dataframe.
-        output_file (str): The path to the output CSV file.
+        output_file (file or str): The file object or path to the output CSV file.
 
     Returns:
         None
     """
     print(f'Saving to CSV file {output_file}')
     # Save dataframe to CSV file for later analysis
-    df.to_csv(output_file, index=False, encoding="utf-8")
+    df.to_csv(output_file, index=False, encoding='utf-8')
 
 def plot_cumulative_time_in_space(df, graph_file):
     """
@@ -68,7 +86,7 @@ def plot_cumulative_time_in_space(df, graph_file):
 
     Args:
         df (pd.DataFrame): The input dataframe.
-        graph_file (str): The path to the output graph file.
+        graph_file (file or str): The file object or path to the output graph file.
 
     Returns:
         None
@@ -82,6 +100,7 @@ def plot_cumulative_time_in_space(df, graph_file):
     plt.tight_layout()
     plt.savefig(graph_file)
     plt.show()
+
 
 
 def text_to_duration(duration):
