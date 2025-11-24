@@ -71,7 +71,7 @@ def text_to_duration(duration):
         duration_hours (float): The duration in hours
     """
     hours, minutes = duration.split(":")
-    duration_hours = int(hours) + int(minutes)/6  # there is an intentional bug on this line (should divide by 60 not 6)
+    duration_hours = int(hours) + int(minutes)/60
     return duration_hours
 
 
