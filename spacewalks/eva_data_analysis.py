@@ -1,5 +1,6 @@
-mport matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import pandas as pd
+
 
 def read_json_to_dataframe(input_file):
     """
