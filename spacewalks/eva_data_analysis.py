@@ -10,6 +10,9 @@ def main(input_file, output_file, graph_file):
     # Read the data from JSON file
     eva_data = read_json_to_dataframe(input_file)
 
+    # Calculate and add crew size to data
+    eva_data = add_crew_size_column(eva_data)
+
     # Convert and export data to CSV file
     write_dataframe_to_csv(eva_data, output_file)
 
@@ -75,7 +78,7 @@ def plot_cumulative_time_in_space(df, graph_file):
         None
     """
     print(f'Plotting cumulative spacewalk duration and saving to {graph_file}')
-    df = add_duration_hours_variable(df)
+    df = add_duration_hours(df)
     df['cumulative_time'] = df['duration_hours'].cumsum()
     plt.plot(df['date'], df['cumulative_time'], 'ko-')
     plt.xlabel('Year')
@@ -100,7 +103,7 @@ def text_to_duration(duration):
     return duration_hours
 
 
-def add_duration_hours_variable(df):
+def add_duration_hours(df):
     """
     Add duration in hours (duration_hours) variable to the dataset
 
@@ -140,7 +143,7 @@ def add_crew_size_column(df):
         df (pd.DataFrame): The input data frame.
 
     Returns:
-        df_copy (pd.DataFrame): A copy of df with the new crew_size variable added
+        df_copy (pd.DataFrame): A copy of the dataframe df with the new crew_size variable added
     """
     print('Adding crew size variable (crew_size) to dataset')
     df_copy = df.copy()
@@ -161,6 +164,6 @@ if __name__ == "__main__":
         output_file = sys.argv[2]
         print('Using custom input and output filenames')
 
-    graph_file = './cumulative_eva_graph.png'
+    graph_file = 'results/cumulative_eva_graph.png'
 
     main(input_file, output_file, graph_file)
