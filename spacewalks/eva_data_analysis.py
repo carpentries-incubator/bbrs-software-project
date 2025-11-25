@@ -62,6 +62,7 @@ def write_dataframe_to_csv(df, output_file):
     # Save dataframe to CSV file for later analysis
     df.to_csv(output_file, index=False, encoding='utf-8')
 
+
 def plot_cumulative_time_in_space(df, graph_file):
     """
     Plot the cumulative time spent in space over years.
@@ -79,7 +80,7 @@ def plot_cumulative_time_in_space(df, graph_file):
         None
     """
     print(f'Plotting cumulative spacewalk duration and saving to {graph_file}')
-    df = add_duration_hours_variable(df)
+    df = add_duration_hours(df)
     df['cumulative_time'] = df['duration_hours'].cumsum()
     plt.plot(df['date'], df['cumulative_time'], 'ko-')
     plt.xlabel('Year')
@@ -104,7 +105,7 @@ def text_to_duration(duration):
     return duration_hours
 
 
-def add_duration_hours_variable(df):
+def add_duration_hours(df):
     """
     Add duration in hours (duration_hours) variable to the dataset
 
@@ -144,7 +145,7 @@ def add_crew_size_column(df):
         df (pd.DataFrame): The input data frame.
 
     Returns:
-        df_copy (pd.DataFrame): A copy of df with the new crew_size variable added
+        df_copy (pd.DataFrame): A copy of the dataframe df with the new crew_size variable added
     """
     print('Adding crew size variable (crew_size) to dataset')
     df_copy = df.copy()
@@ -165,12 +166,11 @@ def summary_duration_by_astronaut(df):
     Returns:
         sum_by_astro (pd.DataFrame): Data frame with a row for each astronaut and a summarised column 
     """
-    print(f'Calculating summary of total EVA time by astronaut')
     subset = df.loc[:,['crew', 'duration']] # subset to work with only relevant columns
     subset.crew = subset.crew.str.split(';').apply(lambda x: [i for i in x if i.strip()]) # splitting the crew into individuals and removing blank string splits from ending ;
     subset = subset.explode('crew') # separating lists of crew into individual rows
-    subset = add_duration_hours_variable(subset) # need duration_hours for easier calcs
-    subset = subset.drop('duration', axis=1) # dropping extra duration column as those don't calculate correctly
+    subset = add_duration_hours(subset) # need duration_hours for easier calcs
+    subset = subset.drop('duration', axis=1) # dropping the extra 'duration' column as it contains string values not suitable for calulations
     subset = subset.groupby('crew').sum() 
     return subset
 
@@ -186,7 +186,7 @@ if __name__ == "__main__":
         output_file = sys.argv[2]
         print('Using custom input and output filenames')
 
-    graph_file = './cumulative_eva_graph.png'
+    graph_file = 'results/cumulative_eva_graph.png'
     duration_by_astronaut_output_file = 'results/duration_by_astronaut.csv'
 
     main(input_file, output_file, duration_by_astronaut_output_file, graph_file)
