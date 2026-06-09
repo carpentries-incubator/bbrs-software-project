@@ -53,3 +53,5 @@ python3 eva_data_analysis.py data/eva-data.json results/eva-data.csv
 
 The first argument is path to the JSON data file.
 The second argument is the path the CSV output file.
+
+If the code runs successfully, you should get the resulting plot in `results/cumulative_eva_graph.png`
