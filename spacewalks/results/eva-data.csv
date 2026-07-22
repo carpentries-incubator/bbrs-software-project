@@ -20,6 +20,8 @@ eva,country,crew,vehicle,date,duration,purpose
 20.0,USA,Ed Mitchell;Alan Shepard;,Apollo 14,1971-02-06,0:05,Jettison suit backpacks and equip to lighten ascent
 21.0,USA,David Scott;,Apollo 15,1971-07-30,0:33,Standup EVA to scout and photograph lunar surface before traverse
 22.0,USA,David Scott;James Irwin;,Apollo 15,1971-07-31,6:34,Collected 169 lb of geologic material.  ALSEP exp deployed.  First use of the lunar rover.  Covered 6.2 mile (10.3 km) circuit
+23.0,USA,David Scott;James Irwin;,Apollo 15,1971-08-01,7:12,
+24.0,USA,David Scott;James Irwin;,Apollo 15,1971-08-02,4:49,
 25.0,USA,David Scott;James Irwin;,Apollo 15,1971-08-02,0:05,Jettison suit backpacks and equip to lighten ascent
 26.0,USA,Al Worden;,Apollo 15,1971-08-05,0:39,First transearth EVA.  Retrieved 2 camera film cassettes
 27.0,USA,John Young;Charles Duke;,Apollo 16,1972-04-21,7:11,Collected 208 lb of rock/dust (41lb this day). ALSEP & solar wind experiments deployed. Assembled and used lunar rover (4.2 km).  
@@ -28,6 +30,8 @@ eva,country,crew,vehicle,date,duration,purpose
 30.0,USA,John Young;Charles Duke;,Apollo 16,1972-04-23,0:04,Jettison suit backpacks and equip to lighten ascent
 31.0,USA,Tom Mattingly;,Apollo 16,1972-04-25,1:23,Transearth EVA to retrieve camera film and expose microbial response experiment
 32.0,USA,Harrison Schmidt;Eugene Cernan;;,Apollo 17,1972-12-11,7:12,Collected 243 lb of geologic material.  ALSEP exp deployed.   8 seismic explosive charges placed for later use.  Used lunar rover to travel 11.4 miles (19 km) circuit with max range of 4.9 miles from lunar module.
+33.0,USA,Harrison Schmidt;Eugene Cernan;;,Apollo 17,1972-12-12,7:37,
+34.0,USA,Harrison Schmidt;Eugene Cernan;;,Apollo 17,1972-12-13,7:16,
 35.0,USA,Harrison Schmidt;Eugene Cernan;;,Apollo 17,1972-12-13,0:08,Jettison suit backpacks and equip to lighten ascent
 36.0,USA,Ron Evans;,Apollo 17,1972-12-17,1:07,Transearth EVA to retrieve camera film
 37.0,USA,Paul Weitz;Joe Kerwin;,Skylab 2,1973-05-25,0:40,"Standup EVA.  While based in hatch of just arrived hovering spacecraft, failed to pull/pry free solar panel held by cm wide scrap of MMOD shield"
@@ -40,6 +44,7 @@ eva,country,crew,vehicle,date,duration,purpose
 44.0,USA,Gerald Carr;Bill Pogue;,Skylab 4,1973-12-25,7:01,"Photographed comet Kohoutek, reloaded telescope camera film, pinned open failed solar UV exp door.  Installed solar UV/X-Ray camera.  Repositioned jammed filter wheel in x-ray telescope"
 45.0,USA,Gerald Carr;Ed Gibson;,Skylab 4,1973-12-29,3:29,Photographed comet Kohoutek.  Retrieved sample of meteroid protection cover
 46.0,USA,Gerald Carr;Ed Gibson;,Skylab 4,1974-02-03,5:19,Retrieved telescope camera film and installed meteroid collection experiment. Gibson reported coolant leakage from EVA life support system
+,USA,Bill Lenoir;Joe Allen;,STS-5,1982-11-14,0:00,Suit fan and O2 regulator failures prevented first Shuttle EVA.  No spare suit onboard
 47.0,USA,Story Musgrave;Don Peterson;,STS-6,1983-04-07,4:17,First shuttle EVA.  New suits tested.  Basic orbiter/payload contingency tasks practiced.  Winch failed to retract
 48.0,USA,Bob Stewart;Bruce McCandless;,STS-41B,1984-02-07,5:56,Practiced Solar Max repair. Used MMU and MFR for first time.  PLB camera D changed out.  Slidewire bracket pip-pin pulled free by crew tether inadvertantly.  SPAS switch adjusted
 49.0,USA,Bob Stewart;Bruce McCandless;,STS-41B,1984-02-09,6:09,Practiced MMU docking with fixed target.  Simple satellite refueling demo (freon).  Foot restraint lost overboard and recovered.  
@@ -53,6 +58,7 @@ eva,country,crew,vehicle,date,duration,purpose
 57.0,USA,James Van Hoften;Bill Fisher;,STS-51I,1985-09-01,4:29,LEASAT/SYNCOM IV repairs completed.  Accidently reused depleted LiOH cans from 1st EVA.
 58.0,USA,Jerry Ross;Woody Spring;,STS-61B,1985-11-29,5:38,EASE/ACCESS truss assembly and stowage demos.  Deployed radar target
 59.0,USA,Jerry Ross;Woody Spring;,STS-61B,1985-12-01,6:48,"EASE/ACCESS truss assembly, stowage and handling demos.  Simulated cable routing with rope reel and heat pipe handling with free EASE beams."
+,USA,Bruce McCandless;Kathy Sullivan;,STS-31,1990-04-24,0:00,In suits in airlock at 5psi awaiting GO to manually deploy stuck solar array.  Waived off when auto sys worked
 60.0,USA,Jerry Ross;Jay Apt;,STS-37,1991-04-07,4:26,"Freed stuck GRO high gain antenna. Started Space Station demos (recorded crew loads, variable tension rope translation, dogbone handrails)."
 61.0,USA,Jerry Ross;Jay Apt;,STS-37,1991-04-08,6:00,"More Space Station demos (evals of 3 different carts and a tether shuttle, RMS translation rates and loads).  Time short for all RMS/EVA tests"
 62.0,USA,Pierre Thuot;Rick Hieb;,STS-49,1992-05-10,3:43,Capture bar/grapple fixture attach failed 3 times
